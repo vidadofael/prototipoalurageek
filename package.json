@@ -1,0 +1,11 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "test projeto alurageek",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specifield\\\" && exit 1"
+  },
+  "author": "Raphael Dias",
+  "license": "ISC"
+}

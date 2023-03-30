@@ -1,0 +1,10 @@
+{
+  "produtos": [
+    {
+      "imagemUrl": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRlPQkF848BclrLGDKc15jfv-1lN6Q4LRqJhl_bFAiS7FIT8A9dUyISRG70SdOsbyljbCh7EZalIah4lJ1YsjloSbvXVFTrR_0OHvtrLzGf&usqp=CAE",
+      "nome": "thor",
+      "preco": "7",
+      "id": 1
+    }
+  ]
+}

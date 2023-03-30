@@ -1,0 +1,30 @@
+.topo__sessaoProdutos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.topo__sessaoProdutos button {
+    border: none;
+    background-color: #2A7AE4;
+    padding: 1rem;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+.topo__sessaoProdutos button:hover {
+    background-color: white;
+    color: #2A7AE4;
+    
+    border: 1px solid #2A7AE4;
+}
+
+.select__sessao {
+    
+    margin-bottom: 20px;
+    border: 1px solid red;
+}

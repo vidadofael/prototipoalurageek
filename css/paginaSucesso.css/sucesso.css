@@ -1,0 +1,36 @@
+.sucesso__janela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 2rem;
+    box-shadow: 2px 5px 25px rgb(209, 209, 209);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 10px;
+    
+}
+
+.sucesso__janela h1 {
+    font-size: 18px;
+    padding: 2rem;
+}
+
+.sucesso__janela img {
+    width: 50px;
+}
+
+.sucesso__janela button {
+    background-color:  #2A7AE4;
+    border: 1px solid white;
+    padding: 1rem;
+    color: white;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.sucesso__janela button:hover {
+    background-color: white;
+    border: 1px solid #2a7ae4;
+    color: #2a7ae4
+}

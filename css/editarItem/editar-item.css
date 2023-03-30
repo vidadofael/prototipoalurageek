@@ -1,0 +1,41 @@
+.editar__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: 2px 5px 25px rgb(209, 209, 209);
+    
+}
+
+.editar__item label {
+    display: none;
+}
+
+.editar__item input {
+    width: 50vw;
+}
+.editar__item h2 {
+    padding-bottom: 2rem;
+}
+.editar__item textarea {
+    width: 100%;
+}
+
+.editar__item button {
+    background-color: #2A7AE4;
+    padding: .6rem;
+    width: 100%;
+    color: white;
+    border: 1px solid #2a7ae4;
+    transition: .3s ease-in-out;
+}
+
+.editar__item button:hover {
+    background-color: white;
+    color: #2A7AE4;
+    font-weight: 700;
+}

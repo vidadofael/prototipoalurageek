@@ -1,0 +1,70 @@
+/*comando para rodar o json server*/
+json-server --watch db.json
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+PS C:\Users\vidad\Desktop\testeAluraGeek> browser-sync start --server --file . --host --port 5000 --startPath admin/telas/lista_produtos.html
+[Browsersync] Access URLs:
+ ------------------------------------------------------------------
+       Local: http://localhost:5000/admin/telas/lista_produtos.html
+    External: http://true:5000/admin/telas/lista_produtos.html
+ ------------------------------------------------------------------
+          UI: http://localhost:3001
+ UI External: http://localhost:3001
+ ------------------------------------------------------------------
+[Browsersync] Serving files from: ./
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+/*SUBSTITUIMOS ESSE CODIGO PELA FETCH:*/
+ /*14 - INICIA A PROMISE*/
+    const promise = new Promise((resolve, reject) => {
+        /*1 - cria a requisição de comunicação*/
+        const http = new XMLHttpRequest()
+
+        /*2 - metodos - abre a comunicação com 2 argumentos: o que pedir para o servidor e o endereço para envio da requisição*/
+        http.open('GET', 'http://localhost:3000/produtos')
+
+        /*4 - metodo on load - "ao carregar a página"*/
+        http.onload = () => {
+            /*16 - tinha um código aqui antes de usarmos a promise que está colada agora no leiame */
+            if(http.status >= 400) {
+                reject(JSON.parce(http.response))
+            }else {
+                resolve(JSON.parse(http.response))
+            }
+        }
+        /*3 - envia a requisição*/
+        http.send()
+    })
+    /*console.log(promise)*/
+    return promise
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
+div sendo criada:
+<img class="imgProdutoVenda" src="${imagemUrl}" alt="boneco" data-imagemProduto>
+                <img class="botao__excluir" id="excluir" src="../assets/icone-apagar.png" alt="botao de excluir produto">
+                <a href="http://127.0.0.1:5500/admin/telas/editarItem.html">
+                    <img class="botao__editar" id="editar" src="../assets/icone-editar.png" alt="botão para editar o produto">
+                </a>
+                <h3>
+                    ${nome} 
+                </h3>
+                <div class="preco__item">   
+                    <del style="font-size: 10px; margin: 0; color: #CD495F;">
+                        R$ 599,90
+                    </del>
+                    <p class="preco__novo">
+                        R$ ${preco}
+                    </p>
+                </div>
+                <a src="#">
+                    ver mais
+                </a>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset-normalize/normalize.css">
+    <link rel="stylesheet" href="../reset-normalize/reset.css">
+    <link rel="stylesheet" href="../css/editarItem/editar-item.css">
+
+    <title>Editar Produto | AluraGeek</title>
+</head>
+<body>
+    
+
+    <section class="editar__item">
+        <h2>Editar Produto</h2>
+        <form action="" data-form>
+            <label for="imagem">URL da imagem:</label>
+            <input id="data-imagemUrl" type="text" name="imagem" placeholder="URL da imagem">
+            <br><br>
+            <label for="nome">Nome do Produto:</label>
+            <input id="data-nome" type="text" id="nome" name="nome" maxlength="20" placeholder="Nome do Produto" required>
+            <br><br>
+            <label for="preco">Preço do Produto:</label>
+            <input id="data-preco" type="number" id="preco" name="preco" placeholder="Preço do Produto" required>
+            <br><br>
+            <button class="botao__adicionarProduto">Salvar Produto</button>
+        </form>
+    </section>
+
+
+
+</body>
+
+<script type="module" src="../controller/atualizaProduto-contoler.js"></script>
+
+</html>

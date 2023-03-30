@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset-normalize/normalize.css">
+    <link rel="stylesheet" href="../reset-normalize/reset.css">
+    <link rel="stylesheet" href="../css/todos-os-produtos/produtos.css">
+    <link rel="stylesheet" href="../css/todos-os-produtos/topo-sessao-todos-produtos.css">
+    <title>Todos Produtos | AluraGeek</title>
+</head>
+<body>
+    <section class="sessao__produtos">
+        <div class="topo__sessaoProdutos">
+            <h1>Todos os Produtos</h1>
+            <button onclick="window.location.href = '../telas/cadastroProdutos.html'">Adicionar Produtos</button>
+        </div>
+        
+        <div class="produtos" data-tabelaDivProduto>
+            <!--
+                <img class="imgProdutoVenda" src="${imagemUrl}" alt="boneco" data-imagemProduto>
+                <img class="botao__excluir" id="excluir" src="../assets/icone-apagar.png" alt="botao de excluir produto">
+                <a href="http://localhost:5001/admin/telas/editarItem.html?id=${id}">
+                    <img class="botao__editar" id="editar" src="../assets/icone-editar.png" alt="botão para editar o produto">
+                </a>
+                <h3>
+                    ${nome} 
+                </h3>
+                <div class="preco__item">   
+                    <del style="font-size: 10px; margin: 0; color: #CD495F;">
+                        R$ 599,90
+                    </del>
+                    <p class="preco__novo">
+                        R$ ${preco}
+                    </p>
+                </div>
+                <a src="#">
+                    ver mais
+                </a>
+            -->
+        </div>
+    </section>
+</body>
+
+<script type="module" src="../controller/listaProdutos-controler.js"></script>
+
+</html>

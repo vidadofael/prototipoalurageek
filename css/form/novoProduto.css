@@ -1,0 +1,57 @@
+.form__novoProduto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid red;
+    align-items: center;
+    width: 100%;
+    background-color: #e5e5e5;
+   
+}
+
+.form__novoProduto h2 {
+    padding-bottom: 2rem;
+}
+
+.form__novoProduto label {
+    display: none;
+}
+
+.form__novoProduto select, input, button {
+    width: 100%;
+    align-items: center;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+}
+
+.form__novoProduto textarea {
+    width: 600px;
+    border: none;
+    height: 80px;
+}
+
+.form__novoProduto input:focus , textarea:focus{
+    outline: none;
+    border: none;
+}
+
+
+.botao__adicionarProduto {
+    background-color: #2A7AE4;
+    color: white;
+    font-size: 14px;
+    transition: .3s ease-in-out;
+    text-align: center;
+}
+
+.botao__adicionarProduto:hover {
+    background-color: white;
+    border: 1px solid #2A7AE4;
+    color: #2A7AE4;
+    font-size: 16px;
+}
+
+

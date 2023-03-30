@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset-normalize/normalize.css">
+    <link rel="stylesheet" href="../reset-normalize/reset.css">
+    <link rel="stylesheet" href="../css/form/novoProduto.css">
+    <link rel="stylesheet" href="../css/todos-os-produtos/topo-sessao-todos-produtos.css">
+    <title>Novos Produtos | AluraGeek</title>
+</head>
+<body>
+    
+
+
+<section class="form__novoProduto">
+    <h2>Adicionar Produto</h2>
+    <form action="" data-form>
+        <label for="imagem">URL da imagem:</label>
+        <input type="src" id="imagem" name="imagem" placeholder="URL da imagem" data-imagemUrl>
+        <br><br>
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" id="nome" name="nome" maxlength="20" placeholder="Nome do Produto" required data-nome>
+        <br><br>
+        <label for="preco">Preço do Produto:</label>
+        <input type="number" id="preco" name="preco" placeholder="Preço do Produto" required data-preco>
+        <br><br>
+        <br><br>
+        <button class="botao__adicionarProduto">Adicionar produto</button>
+    </form>
+</section>
+
+
+
+</body>
+
+
+<script type="module" src="../controller/cadastraProduto-controler.js"></script>
+</html>
