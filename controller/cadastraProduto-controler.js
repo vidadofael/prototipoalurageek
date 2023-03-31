@@ -7,8 +7,15 @@ formulario.addEventListener('submit', (evento) => {
     const nome = evento.target.querySelector('[data-nome]').value
     const preco = evento.target.querySelector('[data-preco]').value
 
-    produtosService.criaProduto(imagem, nome, preco)
-    .then(() => {
-        window.location.href = '../telas/info-sucesso.html'
-    })
+    try {
+        produtosService.criaProduto(imagem, nome, preco)
+        .then(() => {
+            window.location.href = '../telas/info-sucesso.html'
+        })
+    }
+    catch(erro) {
+        console.log(erro)
+        window.location.href = '../telas/erro.html'
+    }
+   
 })

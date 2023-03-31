@@ -33,18 +33,34 @@ const tabela = document.querySelector('[data-tabelaDivProduto]');
 tabela.addEventListener('click', async (evento) => {
     let ehBotaoDeletar = evento.target.className === 'botao__excluir'
     if(ehBotaoDeletar) {
-        const criaNovaDiv = evento.target.closest('[data-id]')
-        let id = criaNovaDiv.dataset.id
-        await produtosService.removeProduto(id)
-        criaNovaDiv.remove()
+        try {
+            const criaNovaDiv = evento.target.closest('[data-id]')
+            let id = criaNovaDiv.dataset.id
+            await produtosService.removeProduto(id)
+            criaNovaDiv.remove()
+        }
+        catch(erro) {
+            console.log(erro)
+            window.location.href = '../telas/erro.html'
+        }
+        
     }
 })
 
+
+
 const render = async () => {
-    const produtoService = await produtosService.listaProdutos();
-    produtoService.forEach(elemento => {
+    try {
+        const produtoService = await produtosService.listaProdutos();
+        produtoService.forEach(elemento => {
         tabela.appendChild(novaDivProduto(elemento.imagemUrl, elemento.nome, elemento.preco, elemento.id));
     });
+    }
+    catch(erro) {
+        console.log(erro)
+        window.location.href = '../telas/erro.html'
+    }
+    
 }
 
 render();

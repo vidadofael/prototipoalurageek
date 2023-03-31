@@ -10,16 +10,30 @@ import { produtosService } from "../servico/produtoService.js"
     const inputNome = document.querySelector('#data-nome')
     const inputPreco = document.querySelector('#data-preco')
 
-    const dados = await produtosService.detalhaProduto(id)
-    inputImagem.value = dados.imagemUrl
-    inputNome.value = dados.nome
-    inputPreco.value = dados.preco
-
+    try {
+        const dados = produtosService.detalhaProduto(id)
+        .then( dados => {
+        inputImagem.value = dados.imagemUrl
+        inputNome.value = dados.nome
+        inputPreco.value = dados.preco
+    })
+    }
+    catch(erro) {
+        console.log(erro)
+        window.location.href = '../telas/erro.html'
+    }
+    
     const formulario = document.querySelector('[data-form]')
-
     formulario.addEventListener('submit', async (evento) => {
         evento.preventDefault()
-        await produtosService.atualizaProduto(id, inputImagem.value, inputNome.value, inputPreco.value)
+        try {
+            await produtosService.atualizaProduto(id, inputImagem.value, inputNome.value, inputPreco.value)
             window.location.href = '../telas/edicao-concluida.html'  
-    }   )
+       
+        }
+        catch(erro) {
+            console.log(erro)
+            window.location.href = '../telas/erro.html'
+        }
+    })   
 })()

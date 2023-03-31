@@ -1,7 +1,10 @@
 const listaProdutos = () => {
    return fetch(`http://localhost:3000/produtos`)
    .then(resposta => {
-    return resposta.json()
+    if(resposta.ok) {
+        return resposta.json()
+    }
+    throw new Error('Não foi possível listar os produtos. Contacte o suporte.')
    })
 };
 
@@ -18,20 +21,32 @@ const criaProduto = (imagemUrl, nome, preco) => {
       }),
     })
       .then(resposta => {
-        return resposta.body;
+        if(resposta.ok) {
+            return resposta.body;
+        }
+        throw new Error('Não foi possível cadastrar o produto. Contacte o suporte.')
       });
 };
 
 const removeProduto = (id) => {
     return fetch(`http://localhost:3000/produtos/${id}`, {
         method: 'DELETE'
+    }).then(resposta => {
+        if(!resposta.ok) {
+            throw new Error('Não foi possível excluir o produto. Contacte o suporte.')
+        }
+            
     })
+    return resposta.body
 }
 
 const detalhaProduto = (id) => {
     return fetch(`http://localhost:3000/produtos/${id}`)
    .then(resposta => {
-    return resposta.json()
+    if(resposta.ok){
+        return resposta.json()
+    }
+    throw new Error('Não foi possível detalhar o produto. Contacte o suporte.')
    })
 }
 
@@ -48,7 +63,11 @@ const atualizaProduto = (id, imagemUrl, nome, preco) => {
         })
     })
     .then( resposta => {
-        return resposta.json()
+        if(resposta.ok) {
+            return resposta.json()
+        }
+        throw new Error('Não foi possível atualizar o produto. Contacte o suporte.')
+        
     })
 }   
 
